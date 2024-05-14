@@ -10,6 +10,7 @@ Ontology(<http://purl.org/ncor-br/mlo/mlo-contracts>
 <http://purl.org/ncor-br/mlo/2024/1/mlo-contracts>
 Import(<http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> "Mathias Brochhausen"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Mauricio B. Almeida"@en)
 Annotation(<http://purl.org/dc/elements/1.1/license> "Modular Legal Ontology (ML), contracts module"@en)
 Annotation(rdfs:comment "The Modular Legal Ontology (MLO) has been created to integrate law resources. It is based on the Basic Formal Ontology (BFO) and its extensions, such as IAO, D-acts, CCO, etc. It will be a suite of legal ontologies that modularly cover several aspects of the legal domain in the USA."@en)
 Annotation(owl:versionInfo "2024-05-14"@en)
