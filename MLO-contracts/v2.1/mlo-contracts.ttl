@@ -44,6 +44,12 @@
                                                                rdfs:label "requires"@en .
 
 
+###  http://purl.org/ncor-br/mlo/mlo-contracts/agent_in
+<http://purl.org/ncor-br/mlo/mlo-contracts/agent_in> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                                     rdfs:label "agent in"@en .
+
+
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/is_prescribed_by
 <http://purl.org/ncor-br/mlo/mlo-contracts/is_prescribed_by> rdf:type owl:ObjectProperty ;
                                                              rdfs:label "is prescribed by"@en .
@@ -56,23 +62,33 @@
 ###  http://purl.obolibrary.org/obo/IAO_0021008
 <http://purl.obolibrary.org/obo/IAO_0021008> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                             rdfs:comment "A role that inheres in an agent and which is externally grounded in the normative expectations that other agents within a social context have concerning how that agent should behave."@en ;
                                              rdfs:label "deontic role"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0021013
 <http://purl.obolibrary.org/obo/IAO_0021013> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0021008> ;
+                                             rdfs:comment "A deontic role that inheres in an agent A, that mutually depends on the existence of a duty holder role borne by agent B, and that specifies B doing or abstaining from C, or providing or surrendering C to A."@en ;
                                              rdfs:label "Claimant role"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_commercial_bargaining
 <http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_commercial_bargaining> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131130> ,
+                                                                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommissiveCommunication> ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618134132> ;
                                                                                            owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131239>
                                                                                          ] ;
+                                                                         rdfs:comment "Act of commercial bargaining is an exchange of promises, acts, or both, in which each party views what she gives as the price for what she gets within a commercial aggreement."@en ;
                                                                          rdfs:label "Act of commercial bargaining"@en .
+
+
+###  http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_concluding_a_bargain
+<http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_concluding_a_bargain> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                        rdfs:comment "‘Act of concluding a bargain’ is the final part of a commercial bargaining."@en ;
+                                                                        rdfs:label "Act of concluding a bargain"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618125101
@@ -82,6 +98,7 @@
                                                                                  owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/is_prescribed_by> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618130412>
                                                                                ] ;
+                                                               rdfs:comment "‘Law of contracts’ refers to the body of law that governs the formation, execution, and enforcement of agreements between parties."@en ;
                                                                rdfs:label "Law of contracts"@en .
 
 
@@ -92,6 +109,7 @@
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000058> ;
                                                                                  owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/AuthorityRole>
                                                                                ] ;
+                                                               rdfs:comment "A source of law is a set of documents that establish legal principles, rules, and standards governing a society."@en ;
                                                                rdfs:label "Source of law"@en .
 
 
@@ -102,6 +120,7 @@
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_commercial_bargaining>
                                                                                ] ;
+                                                               rdfs:comment "‘Offere’ is one party of a commercial bargain."@en ;
                                                                rdfs:label "Offeree"@en .
 
 
@@ -112,6 +131,7 @@
                                                                                  owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618133933> ;
                                                                                  owl:someValuesFrom <http://www.ontologyrepository.com/CommonCoreOntologies/GovernmentOrganization>
                                                                                ] ;
+                                                               rdfs:comment "Act of legislating is a planned act performed by some branch of a government."@en ;
                                                                rdfs:label "Act of legislating" .
 
 
@@ -129,29 +149,26 @@
                                                                                                       rdf:type owl:Class
                                                                                                     ]
                                                                                ] ;
+                                                               rdfs:comment "Offer and silence act is an act that do not represents a clear offer made by one party and an acceptance of that offer by the other party."@en ;
                                                                rdfs:label "Offer and silence act"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131130
 <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131130> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommissiveCommunication> ,
+                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618134132> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131239>
                                                                                ] ;
+                                                               rdfs:comment "Act of bargaining is the act of establishing an agreement between parties settling what each shall give and take or perform and receive in a transaction."@en ;
                                                                rdfs:label "Act of bargaining"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131239
 <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131239> rdf:type owl:Class ;
                                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                               rdfs:comment "Act of commercial exchange  is a social act involving two parties in which each party transfers something of value to the other party, either a good or a service, and in which relevant deontic roles begin to inhere in one party or the other."@en ;
                                                                rdfs:label "Act of commercial exchange"@en .
-
-
-###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131458
-<http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131458> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPromising> ;
-                                                               rdfs:label "Act of contract formation"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131600
@@ -164,6 +181,7 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "Act of legally promising is a promise that meets some authority requirements supported by law."@en ;
                                                                rdfs:label "Act of legally promising"@en .
 
 
@@ -174,6 +192,7 @@
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618131955>
                                                                                ] ;
+                                                               rdfs:comment "Enforceable factor’ is a disposition that contains element or condition making a contract legally binding and capable of being upheld in a court of law."@en ;
                                                                rdfs:label "Enforceable factor"@en .
 
 
@@ -184,6 +203,7 @@
                                                                                  owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618134217> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132231>
                                                                                ] ;
+                                                               rdfs:comment "‘Invalid act of contracting is-a act of promising that does not contain the basic elements to be enforceable."@en ;
                                                                rdfs:label "Invalid act of contracting"@en .
 
 
@@ -194,6 +214,7 @@
                                                                                  owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618134217> ;
                                                                                  owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132605>
                                                                                ] ;
+                                                               rdfs:comment "Valid act of contracting is a legal promise that requires some legal criteria for contract formation, namely, mutual assent and consideration."@en ;
                                                                rdfs:label "Valid act of contracting"@en .
 
 
@@ -208,6 +229,7 @@
                                                                                                                   )
                                                                                                     ]
                                                                                ] ;
+                                                               rdfs:comment "‘Invalid act of contract formation’ does not contain a valid consideration or a valid mutual assent."@en ;
                                                                rdfs:label "Invalid act of contract formation"@en .
 
 
@@ -227,6 +249,7 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "Invalid consideration concerns kinds of promises that are not legally enforceable."@en ;
                                                                rdfs:label "Invalid consideration"@en .
 
 
@@ -244,12 +267,13 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "Valid mutual assent’ is one of the conditions to verify the contract formation. Invalid mutual assent is a situation in which both parties do not have a mutual understanding and agreement on the terms of the contract."@en ;
                                                                rdfs:label "Invalid mutual assent"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132419
 <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132419> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ,
+                                                               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000057> ;
                                                                                  owl:someValuesFrom [ owl:intersectionOf ( <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618130139>
@@ -261,6 +285,7 @@
                                                                                                       rdf:type owl:Class
                                                                                                     ]
                                                                                ] ;
+                                                               rdfs:comment "Offer and Acceptance Planned act is an act that represents a clear offer made by one party and an unequivocal acceptance of that offer by the other party."@en ;
                                                                rdfs:label "Offer and acceptance act"@en .
 
 
@@ -278,6 +303,7 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "Valid consideration is one of the conditions to verify the contract formation. In contract law, it concerns kinds of promises that are legally enforceable."@en ;
                                                                rdfs:label "Valid consideration"@en .
 
 
@@ -295,12 +321,13 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "‘Valid mutual assent’ is one of the conditions to verify the contract formation. It is a situation in wich both parties must have a mutual understanding and agreement on the terms of the contract."@en ;
                                                                rdfs:label "Valid mutual assent"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132605
 <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132605> rdf:type owl:Class ;
-                                                               rdfs:subClassOf [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/Act>
+                                                               rdfs:subClassOf [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct>
                                                                                                       [ rdf:type owl:Restriction ;
                                                                                                         owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618134217> ;
                                                                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132454>
@@ -312,20 +339,8 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "‘Valid act of contract formation’ is-a planned act that requires two other elements for the contract be enforceable, namely, mutual assent and consideration."@en ;
                                                                rdfs:label "Valid act of contract formation"@en .
-
-
-###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132714
-<http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132714> rdf:type owl:Class ;
-                                                               rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                                                                                        owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_commercial_bargaining>
-                                                                                                      ]
-                                                                                                    ) ;
-                                                                                 rdf:type owl:Class
-                                                                               ] ;
-                                                               rdfs:label "Concluding bargain process"@en .
 
 
 ###  http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618140341
@@ -336,7 +351,7 @@
                                                                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/Agent>
                                                                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000056> ;
-                                                                                                                                                    owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/MLO_20240618132714>
+                                                                                                                                                    owl:someValuesFrom <http://purl.org/ncor-br/mlo/mlo-contracts/Act_of_concluding_a_bargain>
                                                                                                                                                   ]
                                                                                                                                                 ) ;
                                                                                                                              rdf:type owl:Class
@@ -345,6 +360,7 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "‘Power of acceptance role’ is a role that can conclude a commercial bargain."@en ;
                                                                rdfs:label "Power of acceptance role"@en .
 
 
@@ -365,48 +381,57 @@
                                                                                                     ) ;
                                                                                  rdf:type owl:Class
                                                                                ] ;
+                                                               rdfs:comment "‘Power of silence role’ is a role that does not manifests herself to accept a commercial bargain."@en ;
                                                                rdfs:label "Power of silence role"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Act
 <http://www.ontologyrepository.com/CommonCoreOntologies/Act> rdf:type owl:Class ;
                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                             rdfs:comment "A Process in which at least one Agent plays a causative role."@en ;
                                                              rdfs:label "Act"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommissiveCommunication
 <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommissiveCommunication> rdf:type owl:Class ;
                                                                                       rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication> ;
+                                                                                      rdfs:comment "An Act of Communication that commits a speaker to some future action"@en ;
                                                                                       rdfs:label "Act of commissive communication"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication
 <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommunication> rdf:type owl:Class ;
                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> ;
+                                                                            rdfs:comment "A Planned Act in which some Information Content Entity is transferred from some Agent to Another."@en ;
                                                                             rdfs:label "Act of communication"@en .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfGovernment
-<http://www.ontologyrepository.com/CommonCoreOntologies/ActOfGovernment> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ;
-                                                                         rdfs:label "Act of government"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPromising
 <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPromising> rdf:type owl:Class ;
                                                                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActOfCommissiveCommunication> ;
+                                                                        rdfs:comment "‘Act of promising*’ is-an ‘Act of Commissive Communication’ that is performed by declaring that the promising agent will do, or refrain from doing, the specified action."@en ;
                                                                         rdfs:label "Act of promising"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Agent
 <http://www.ontologyrepository.com/CommonCoreOntologies/Agent> rdf:type owl:Class ;
+                                                               owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://purl.org/ncor-br/mlo/mlo-contracts/agent_in> ;
+                                                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ] ;
                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                               rdfs:comment "A Material Entity that is capable of performing Planned Acts"@en ;
                                                                rdfs:label "Agent"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/AuthorityRole
 <http://www.ontologyrepository.com/CommonCoreOntologies/AuthorityRole> rdf:type owl:Class ;
                                                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                       rdfs:comment "Authority role*’ is a Role that is realized by Acts which create, modify, transfer, or eliminate Action Regulations or other Authority Roles, and inheres in an Agent in virtue of collective acceptance of that Agent's ability to issue binding directives."@en ;
                                                                        rdfs:label "Authority role"@en .
 
 
@@ -429,6 +454,7 @@
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
 <http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> rdf:type owl:Class ;
                                                                         rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Act> ;
+                                                                        rdfs:comment "Planned Act is an Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
                                                                         rdfs:label "Planned act"@en .
 
 
